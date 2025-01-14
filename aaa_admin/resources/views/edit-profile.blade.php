@@ -43,18 +43,26 @@
                             <div class="card-body card-block">
                                 <form action="#" method="post" class="form-horizontal">
                                     <div class="row form-group">
-                                        <div class="col col-md-3"><label for="hf-email"
-                                                class=" form-control-label">Email</label></div>
-                                        <div class="col-12 col-md-9"><input type="email" id="hf-email" name="hf-email"
-                                                placeholder="Enter Email..." class="form-control">
+                                        <div class="col col-md-3">
+                                            <label for="hf-email" class=" form-control-label">Display Name</label>
+                                        </div>
+                                        <div class="col-12 col-md-9">
+                                            <input type="email" id="hf-email" name="hf-email" placeholder="Enter Name..." class="form-control">
                                         </div>
                                     </div>
                                     <div class="row form-group">
-                                        <div class="col col-md-3"><label for="hf-password"
-                                                class=" form-control-label">Password</label></div>
-                                        <div class="col-12 col-md-9"><input type="password" id="hf-password"
-                                                name="hf-password" placeholder="Enter Password..."
-                                                class="form-control">
+                                        <div class="col col-md-3">
+                                            <label for="hf-email" class=" form-control-label">Phone</label>
+                                        </div>
+                                        <div class="col-12 col-md-9">
+                                            <input type="email" id="hf-email" name="hf-email" placeholder="Enter Phone..." class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="row form-group">
+                                        <div class="col col-md-3">
+                                            <label for="hf-password" class=" form-control-label">Picture</label></div>
+                                        <div class="col-12 col-md-9">
+                                            <input type="file" id="hf-password" name="hf-password" placeholder="Select Picture..." class="form-control">
                                         </div>
                                     </div>
                                 </form>

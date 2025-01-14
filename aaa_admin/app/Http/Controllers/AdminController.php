@@ -6,8 +6,16 @@ use Illuminate\Http\Request;
 
 class AdminController extends Controller
 {
+    public function adminList(){
+        return view ('admin-list');
+    }
+
+    public function editProfile(){
+        return view('edit-profile');
+    }
+
     public function login(){
-        return view("login");
+        return view("page-login");
     }
 
     public function changePassword(){
@@ -16,9 +24,5 @@ class AdminController extends Controller
 
     public function showNewAdmin(){
         return view("new-admin");
-    }
-
-    public function editProfile(){
-        return view('edit-profile');
     }
 }

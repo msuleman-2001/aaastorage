@@ -2,45 +2,54 @@
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="">
+<!--<![endif]-->
+
 <head>
     @include('partials.head')
 
-   <style>
+    <style>
     #weatherWidget .currentDesc {
-        color: #ffffff!important;
+        color: #ffffff !important;
     }
-        .traffic-chart {
-            min-height: 335px;
-        }
-        #flotPie1  {
-            height: 150px;
-        }
-        #flotPie1 td {
-            padding:3px;
-        }
-        #flotPie1 table {
-            top: 20px!important;
-            right: -10px!important;
-        }
-        .chart-container {
-            display: table;
-            min-width: 270px ;
-            text-align: left;
-            padding-top: 10px;
-            padding-bottom: 10px;
-        }
-        #flotLine5  {
-             height: 105px;
-        }
 
-        #flotBarChart {
-            height: 150px;
-        }
-        #cellPaiChart{
-            height: 160px;
-        }
+    .traffic-chart {
+        min-height: 335px;
+    }
 
+    #flotPie1 {
+        height: 150px;
+    }
+
+    #flotPie1 td {
+        padding: 3px;
+    }
+
+    #flotPie1 table {
+        top: 20px !important;
+        right: -10px !important;
+    }
+
+    .chart-container {
+        display: table;
+        min-width: 270px;
+        text-align: left;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    #flotLine5 {
+        height: 105px;
+    }
+
+    #flotBarChart {
+        height: 150px;
+    }
+
+    #cellPaiChart {
+        height: 160px;
+    }
     </style>
 </head>
 
@@ -48,7 +57,7 @@
     @include('partials.leftpanel')
     <!-- Right Panel -->
     <div id="right-panel" class="right-panel">
-    @include('partials.header');
+        @include('partials.header');
         <!-- Content -->
         <div class="content">
             <!-- Animated -->
@@ -148,28 +157,36 @@
                                             <h4 class="por-title">Visits</h4>
                                             <div class="por-txt">96,930 Users (40%)</div>
                                             <div class="progress mb-2" style="height: 5px;">
-                                                <div class="progress-bar bg-flat-color-1" role="progressbar" style="width: 40%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                                <div class="progress-bar bg-flat-color-1" role="progressbar"
+                                                    style="width: 40%;" aria-valuenow="25" aria-valuemin="0"
+                                                    aria-valuemax="100"></div>
                                             </div>
                                         </div>
                                         <div class="progress-box progress-2">
                                             <h4 class="por-title">Bounce Rate</h4>
                                             <div class="por-txt">3,220 Users (24%)</div>
                                             <div class="progress mb-2" style="height: 5px;">
-                                                <div class="progress-bar bg-flat-color-2" role="progressbar" style="width: 24%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                                <div class="progress-bar bg-flat-color-2" role="progressbar"
+                                                    style="width: 24%;" aria-valuenow="25" aria-valuemin="0"
+                                                    aria-valuemax="100"></div>
                                             </div>
                                         </div>
                                         <div class="progress-box progress-2">
                                             <h4 class="por-title">Unique Visitors</h4>
                                             <div class="por-txt">29,658 Users (60%)</div>
                                             <div class="progress mb-2" style="height: 5px;">
-                                                <div class="progress-bar bg-flat-color-3" role="progressbar" style="width: 60%;" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                                                <div class="progress-bar bg-flat-color-3" role="progressbar"
+                                                    style="width: 60%;" aria-valuenow="60" aria-valuemin="0"
+                                                    aria-valuemax="100"></div>
                                             </div>
                                         </div>
                                         <div class="progress-box progress-2">
-                                            <h4 class="por-title">Targeted  Visitors</h4>
+                                            <h4 class="por-title">Targeted Visitors</h4>
                                             <div class="por-txt">99,658 Users (90%)</div>
                                             <div class="progress mb-2" style="height: 5px;">
-                                                <div class="progress-bar bg-flat-color-4" role="progressbar" style="width: 90%;" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                                                <div class="progress-bar bg-flat-color-4" role="progressbar"
+                                                    style="width: 90%;" aria-valuenow="90" aria-valuemin="0"
+                                                    aria-valuemax="100"></div>
                                             </div>
                                         </div>
                                     </div> <!-- /.card-body -->
@@ -208,11 +225,12 @@
                                                     <td class="serial">1.</td>
                                                     <td class="avatar">
                                                         <div class="round-img">
-                                                            <a href="#"><img class="rounded-circle" src="images/avatar/1.jpg" alt=""></a>
+                                                            <a href="#"><img class="rounded-circle"
+                                                                    src="images/avatar/1.jpg" alt=""></a>
                                                         </div>
                                                     </td>
                                                     <td> #5469 </td>
-                                                    <td>  <span class="name">Louis Stanley</span> </td>
+                                                    <td> <span class="name">Louis Stanley</span> </td>
                                                     <td> <span class="product">iMax</span> </td>
                                                     <td><span class="count">231</span></td>
                                                     <td>
@@ -223,11 +241,12 @@
                                                     <td class="serial">2.</td>
                                                     <td class="avatar">
                                                         <div class="round-img">
-                                                            <a href="#"><img class="rounded-circle" src="images/avatar/2.jpg" alt=""></a>
+                                                            <a href="#"><img class="rounded-circle"
+                                                                    src="images/avatar/2.jpg" alt=""></a>
                                                         </div>
                                                     </td>
                                                     <td> #5468 </td>
-                                                    <td>  <span class="name">Gregory Dixon</span> </td>
+                                                    <td> <span class="name">Gregory Dixon</span> </td>
                                                     <td> <span class="product">iPad</span> </td>
                                                     <td><span class="count">250</span></td>
                                                     <td>
@@ -238,11 +257,12 @@
                                                     <td class="serial">3.</td>
                                                     <td class="avatar">
                                                         <div class="round-img">
-                                                            <a href="#"><img class="rounded-circle" src="images/avatar/3.jpg" alt=""></a>
+                                                            <a href="#"><img class="rounded-circle"
+                                                                    src="images/avatar/3.jpg" alt=""></a>
                                                         </div>
                                                     </td>
                                                     <td> #5467 </td>
-                                                    <td>  <span class="name">Catherine Dixon</span> </td>
+                                                    <td> <span class="name">Catherine Dixon</span> </td>
                                                     <td> <span class="product">SSD</span> </td>
                                                     <td><span class="count">250</span></td>
                                                     <td>
@@ -253,11 +273,12 @@
                                                     <td class="serial">4.</td>
                                                     <td class="avatar">
                                                         <div class="round-img">
-                                                            <a href="#"><img class="rounded-circle" src="images/avatar/4.jpg" alt=""></a>
+                                                            <a href="#"><img class="rounded-circle"
+                                                                    src="images/avatar/4.jpg" alt=""></a>
                                                         </div>
                                                     </td>
                                                     <td> #5466 </td>
-                                                    <td>  <span class="name">Mary Silva</span> </td>
+                                                    <td> <span class="name">Mary Silva</span> </td>
                                                     <td> <span class="product">Magic Mouse</span> </td>
                                                     <td><span class="count">250</span></td>
                                                     <td>
@@ -268,11 +289,12 @@
                                                     <td class="serial">5.</td>
                                                     <td class="avatar pb-0">
                                                         <div class="round-img">
-                                                            <a href="#"><img class="rounded-circle" src="images/avatar/6.jpg" alt=""></a>
+                                                            <a href="#"><img class="rounded-circle"
+                                                                    src="images/avatar/6.jpg" alt=""></a>
                                                         </div>
                                                     </td>
                                                     <td> #5465 </td>
-                                                    <td>  <span class="name">Johnny Stephens</span> </td>
+                                                    <td> <span class="name">Johnny Stephens</span> </td>
                                                     <td> <span class="product">Monitor</span> </td>
                                                     <td><span class="count">250</span></td>
                                                     <td>
@@ -284,7 +306,7 @@
                                     </div> <!-- /.table-stats -->
                                 </div>
                             </div> <!-- /.card -->
-                        </div>  <!-- /.col-lg-8 -->
+                        </div> <!-- /.col-lg-8 -->
 
                         <div class="col-xl-4">
                             <div class="row">
@@ -303,9 +325,9 @@
                                         <div class="card-body">
                                             <h4 class="card-title m-0  white-color ">August 2018</h4>
                                         </div>
-                                         <div class="card-body">
-                                             <div id="flotLine5" class="flot-line"></div>
-                                         </div>
+                                        <div class="card-body">
+                                            <div id="flotLine5" class="flot-line"></div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -326,7 +348,9 @@
                                                 <ul>
                                                     <li>
                                                         <label>
-                                                            <input type="checkbox"><i class="check-box"></i><span>Conveniently fabricate interactive technology for ....</span>
+                                                            <input type="checkbox"><i
+                                                                class="check-box"></i><span>Conveniently fabricate
+                                                                interactive technology for ....</span>
                                                             <a href='#' class="fa fa-times"></a>
                                                             <a href='#' class="fa fa-pencil"></a>
                                                             <a href='#' class="fa fa-check"></a>
@@ -334,7 +358,9 @@
                                                     </li>
                                                     <li>
                                                         <label>
-                                                            <input type="checkbox"><i class="check-box"></i><span>Creating component page</span>
+                                                            <input type="checkbox"><i
+                                                                class="check-box"></i><span>Creating component
+                                                                page</span>
                                                             <a href='#' class="fa fa-times"></a>
                                                             <a href='#' class="fa fa-pencil"></a>
                                                             <a href='#' class="fa fa-check"></a>
@@ -342,7 +368,9 @@
                                                     </li>
                                                     <li>
                                                         <label>
-                                                            <input type="checkbox" checked><i class="check-box"></i><span>Follow back those who follow you</span>
+                                                            <input type="checkbox" checked><i
+                                                                class="check-box"></i><span>Follow back those who follow
+                                                                you</span>
                                                             <a href='#' class="fa fa-times"></a>
                                                             <a href='#' class="fa fa-pencil"></a>
                                                             <a href='#' class="fa fa-check"></a>
@@ -350,7 +378,8 @@
                                                     </li>
                                                     <li>
                                                         <label>
-                                                            <input type="checkbox" checked><i class="check-box"></i><span>Design One page theme</span>
+                                                            <input type="checkbox" checked><i
+                                                                class="check-box"></i><span>Design One page theme</span>
                                                             <a href='#' class="fa fa-times"></a>
                                                             <a href='#' class="fa fa-pencil"></a>
                                                             <a href='#' class="fa fa-check"></a>
@@ -359,7 +388,9 @@
 
                                                     <li>
                                                         <label>
-                                                            <input type="checkbox" checked><i class="check-box"></i><span>Creating component page</span>
+                                                            <input type="checkbox" checked><i
+                                                                class="check-box"></i><span>Creating component
+                                                                page</span>
                                                             <a href='#' class="fa fa-times"></a>
                                                             <a href='#' class="fa fa-pencil"></a>
                                                             <a href='#' class="fa fa-check"></a>
@@ -384,8 +415,8 @@
                                             <li>
                                                 <div class="msg-received msg-container">
                                                     <div class="avatar">
-                                                       <img src="images/avatar/64-1.jpg" alt="">
-                                                       <div class="send-time">11.11 am</div>
+                                                        <img src="images/avatar/64-1.jpg" alt="">
+                                                        <div class="send-time">11.11 am</div>
                                                     </div>
                                                     <div class="msg-box">
                                                         <div class="inner-box">
@@ -393,7 +424,9 @@
                                                                 John Doe
                                                             </div>
                                                             <div class="meg">
-                                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis sunt placeat velit ad reiciendis ipsam
+                                                                Lorem ipsum dolor sit amet, consectetur adipisicing
+                                                                elit. Perspiciatis sunt placeat velit ad reiciendis
+                                                                ipsam
                                                             </div>
                                                         </div>
                                                     </div>
@@ -402,8 +435,8 @@
                                             <li>
                                                 <div class="msg-sent msg-container">
                                                     <div class="avatar">
-                                                       <img src="images/avatar/64-2.jpg" alt="">
-                                                       <div class="send-time">11.11 am</div>
+                                                        <img src="images/avatar/64-2.jpg" alt="">
+                                                        <div class="send-time">11.11 am</div>
                                                     </div>
                                                     <div class="msg-box">
                                                         <div class="inner-box">
@@ -471,14 +504,18 @@
                     <div class="modal-dialog">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                <button type="button" class="close" data-dismiss="modal"
+                                    aria-hidden="true">&times;</button>
                                 <h4 class="modal-title"><strong>Add New Event</strong></h4>
                             </div>
                             <div class="modal-body"></div>
                             <div class="modal-footer">
-                                <button type="button" class="btn btn-default waves-effect" data-dismiss="modal">Close</button>
-                                <button type="button" class="btn btn-success save-event waves-effect waves-light">Create event</button>
-                                <button type="button" class="btn btn-danger delete-event waves-effect waves-light" data-dismiss="modal">Delete</button>
+                                <button type="button" class="btn btn-default waves-effect"
+                                    data-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-success save-event waves-effect waves-light">Create
+                                    event</button>
+                                <button type="button" class="btn btn-danger delete-event waves-effect waves-light"
+                                    data-dismiss="modal">Delete</button>
                             </div>
                         </div>
                     </div>
@@ -489,7 +526,8 @@
                     <div class="modal-dialog">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                <button type="button" class="close" data-dismiss="modal"
+                                    aria-hidden="true">&times;</button>
                                 <h4 class="modal-title"><strong>Add a category </strong></h4>
                             </div>
                             <div class="modal-body">
@@ -497,11 +535,13 @@
                                     <div class="row">
                                         <div class="col-md-6">
                                             <label class="control-label">Category Name</label>
-                                            <input class="form-control form-white" placeholder="Enter name" type="text" name="category-name"/>
+                                            <input class="form-control form-white" placeholder="Enter name" type="text"
+                                                name="category-name" />
                                         </div>
                                         <div class="col-md-6">
                                             <label class="control-label">Choose Category Color</label>
-                                            <select class="form-control form-white" data-placeholder="Choose a color..." name="category-color">
+                                            <select class="form-control form-white" data-placeholder="Choose a color..."
+                                                name="category-color">
                                                 <option value="success">Success</option>
                                                 <option value="danger">Danger</option>
                                                 <option value="info">Info</option>
@@ -514,13 +554,15 @@
                                 </form>
                             </div>
                             <div class="modal-footer">
-                                <button type="button" class="btn btn-default waves-effect" data-dismiss="modal">Close</button>
-                                <button type="button" class="btn btn-danger waves-effect waves-light save-category" data-dismiss="modal">Save</button>
+                                <button type="button" class="btn btn-default waves-effect"
+                                    data-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-danger waves-effect waves-light save-category"
+                                    data-dismiss="modal">Save</button>
                             </div>
                         </div>
                     </div>
                 </div>
-            <!-- /#add-category -->
+                <!-- /#add-category -->
             </div>
             <!-- .animated -->
         </div>
@@ -531,4 +573,5 @@
     <!-- /#right-panel -->
     @include('partials.foot')
 </body>
+
 </html>
