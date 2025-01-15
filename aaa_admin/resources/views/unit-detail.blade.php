@@ -28,34 +28,26 @@
                         <div class="col-md-12">
                             <div class="card">
                                 <div class="card-header">
-                                    <strong class="card-title" v-if="headerText">Location Detail</strong>
+                                    <strong class="card-title" v-if="headerText">Unit Detail</strong>
                                 </div>
                                 <div class="card-body">
                                     <div class="vue-misc">
                                         <div class="row">
                                             <div class="col-md-6">
-                                                <strong>Location ID:</strong><br>
-                                                <span>1038525</span><br><br>
-                                                <strong>Location Name</strong><br>
-                                                <span>AAA Storage</span><br><br>
-                                                <strong>Address</strong><br>
-                                                <span>some address</span><br><br>
-                                                <strong>Phone</strong><br>
-                                                <span>123456</span><br><br>
-                                                <strong>Features</strong>
-                                                <div class="ml-4">
-                                                    <ul>
-                                                        <li>Feature 1</li>
-                                                        <li>Feature 2</li>
-                                                        <li>Feature 3</li>
-                                                    </ul>
-                                                </div>
+                                                <strong>Size</strong><br>
+                                                <span>9x18x8.5</span><br><br>
+                                                <strong>Cubic Footage</strong><br>
+                                                <span>1377</span><br><br>
+                                                <strong>Square Footage</strong><br>
+                                                <span>162</span><br><br>
+                                                <strong>Size Description</strong><br>
+                                                <span>Drive Up 1st Floor Outside Level No Climate Drivethrough Rollup</span><br><br>
+                                                <strong>Rate</strong><br>
+                                                <input type="text" id="txtRate" name="txtRate">
+                                                <a href="" class="btn-sm btn-success">Update</a>
                                             </div>
                                             <div class="col-md-6">
-                                                <strong>Map</strong>
-                                                <div class="jumbotron" style="height: 40vh;">
-                                                    
-                                                </div>
+                                                
                                             </div>
                                         </div>
                                     </div>

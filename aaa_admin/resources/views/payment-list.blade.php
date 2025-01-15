@@ -21,36 +21,28 @@
                     <div class="col-lg-12">
                         <div class="card">
                             <div class="card-header">
-                                <strong class="card-title">Admins</strong>
+                                <strong class="card-title">Payments</strong>
                             </div>
                             <div class="card-body">
-                                <p><a href="{{ route ('new-admin') }}" class="btn btn-success">Add New Admin</a></p>
                                 <table class="table">
                                     <thead>
                                         <tr>
                                             <th scope="col">#</th>
-                                            <th scope="col">Name</th>
-                                            <th scope="col">Email</th>
-                                            <th scope="col">Phone</th>
-                                            <th scope="col">Enable</th>
+                                            <th scope="col">Customer</th>
+                                            <th scope="col">Amoutn</th>
+                                            <th scope="col">Details</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <td>1</td>
+                                            <th scope="row">1</th>
                                             <td>Mark</td>
-                                            <td>mark@aaa.com</td>
-                                            <td>1234556</td>
-                                            <td>
-                                                <div class="custom-control custom-switch">
-                                                    <input type="checkbox" class="custom-control-input" id="switch1">
-                                                    <label class="custom-control-label" for="switch1"></label>
-                                                </div>
-                                            </td>
+                                            <td>$120</td>
+                                            <td>some detailsdfdsfsfasfasfssad</td>
                                         </tr>
                                     </tbody>
                                 </table>
-                            </div> <!-- /.table-stats -->
+                            </div>
                         </div>
                     </div>
                 </div>

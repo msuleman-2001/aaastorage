@@ -34,28 +34,19 @@
                                     <div class="vue-misc">
                                         <div class="row">
                                             <div class="col-md-6">
-                                                <strong>Location ID:</strong><br>
-                                                <span>1038525</span><br><br>
-                                                <strong>Location Name</strong><br>
-                                                <span>AAA Storage</span><br><br>
+                                                <strong>Customer Name</strong><br>
+                                                <span>Alex</span><br><br>
+                                                <strong>Email</strong><br>
+                                                <span>alex@aaa.com</span><br><br>
                                                 <strong>Address</strong><br>
                                                 <span>some address</span><br><br>
                                                 <strong>Phone</strong><br>
                                                 <span>123456</span><br><br>
-                                                <strong>Features</strong>
-                                                <div class="ml-4">
-                                                    <ul>
-                                                        <li>Feature 1</li>
-                                                        <li>Feature 2</li>
-                                                        <li>Feature 3</li>
-                                                    </ul>
-                                                </div>
+                                                <strong>Date Join</strong><br>
+                                                <span>12/12/2024</span><br><br>
                                             </div>
                                             <div class="col-md-6">
-                                                <strong>Map</strong>
-                                                <div class="jumbotron" style="height: 40vh;">
-                                                    
-                                                </div>
+                                                <img src="images/admin.jpg" width="200px" alt="">
                                             </div>
                                         </div>
                                     </div>

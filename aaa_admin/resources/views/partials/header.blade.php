@@ -91,7 +91,7 @@
                 </a>
 
                 <div class="user-menu dropdown-menu">
-                    <a class="nav-link" href="{{ route ('edit-profile') }}"><i class="fa fa-user"></i>My Profile</a>
+                    <a class="nav-link" href="{{ route ('edit-profile') }}"><i class="fa fa-user"></i>Edit Profile</a>
 
                     <a class="nav-link" href="{{ route('change-password') }}"><i class="fa fa-cog"></i>Change Password</a>
 

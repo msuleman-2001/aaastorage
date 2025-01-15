@@ -22,7 +22,7 @@ class AdminController extends Controller
         return view("change-password");
     }
 
-    public function showNewAdmin(){
+    public function newAdmin(){
         return view("new-admin");
     }
 }
