@@ -8,6 +8,38 @@
 
 <head>
     @include('partials.head')
+    <script>
+        async function updateActivationStatus(activation_switch){
+            
+            let spanStatus = document.getElementById('spanStatus' + activation_switch.dataset.id);
+            spanStatus.innerText = 'Wating for update ...';
+            const enabled = activation_switch.checked ? 1 : 0; // Get the new state of the switch
+            const url = "{{ route('set-unit-activate-status') }}";
+            let payload = JSON.stringify
+                ({
+                    unit_id: activation_switch.dataset.id,
+                    enable: enabled,
+                });
+            try {
+                let response = await fetch(url, {
+                    method: "post",
+                    headers: {
+                        "Content-Type": "application/json",
+                        "X-CSRF-TOKEN": "{{ csrf_token() }}" // Include CSRF token for security
+                    },
+                    body: payload
+                });
+                const data = await response.json();
+                if (response.ok)
+                    spanStatus.innerText = '';
+                else
+                    spanStatus.innerText = 'Sorry!'
+            } catch (error) {
+                 alert(error.message);
+            }
+            
+        }
+    </script>
 </head>
 
 <body>
@@ -24,33 +56,59 @@
                                 <strong class="card-title">Units</strong>
                             </div>
                             <div class="card-body">
-                                <table class="table">
-                                    <thead>
-                                        <tr>
-                                            <th scope="col">#</th>
-                                            <th scope="col">Size</th>
-                                            <th scope="col">Description</th>
-                                            <th scope="col">Enable</th>
-                                            <th scope="col">View Details</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>1</td>
-                                            <td>9x18x8.5</td>
-                                            <td>Drive Up 1st Floor Outside Level No Climate Drivethrough Rollup</td>
-                                            <td>
-                                                <div class="custom-control custom-switch">
-                                                    <input type="checkbox" class="custom-control-input" id="switch1">
-                                                    <label class="custom-control-label" for="switch1"></label>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <a href="{{ route ('unit-detail') }}" class="btn-sm btn-danger">View Details</a>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <span>
+                                            <strong>Select Location</strong>
+                                        </span>
+                                        <div class="col-md-6 mb-4">
+                                            <select name="ddlLocations" id="ddlLocations" class="form-control">
+                                                @foreach ($locations as $location)
+                                                    <option value="{{ $location->location_number }}">{{ $location->location_number }}</option>
+                                                @endforeach
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div style="display: flex; justify-content: flex-end;">
+                                            <!-- <button class="btn-success" onclick="updateUnitData();">Update from WSS</button> -->
+                                            <span id="spanStatus"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                @if (count($units) === 0)
+                                    <h4 class="text-danger">No data found</h4>
+                                @else
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">#</th>
+                                                <th scope="col">Location Number</th>
+                                                <th scope="col">Rent (Per Month)</th>
+                                                <th scope="col">Enable</th>
+                                                <th scope="col">View Details</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            @foreach ($units as $unit)
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>{{ $unit->location_number }}</td>
+                                                    <td>{{ $unit->rent_per_month }}</td>
+                                                    <td>
+                                                        <div class="custom-control custom-switch">
+                                                            <input type="checkbox" class="custom-control-input" data-id="{{ $unit->unit_id }}" id="chkEnable{{$unit->unit_id}}" name="chkEnable{{$unit->unit_id}}" onchange="updateActivationStatus(this)" {{ $unit->enable ? 'checked' : '' }}>
+                                                            <label class="custom-control-label" for="chkEnable{{$unit->unit_id}}"><span id="spanStatus{{ $unit->unit_id }}"></span></label>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <a href="{{ route('unit-detail', ['unit_id' => $unit->unit_id]) }}" class="btn-sm btn-danger">View Details</a>
+                                                    </td>
+                                                </tr>
+                                            @endforeach
+                                        </tbody>
+                                    </table>
+                                @endif
                             </div> <!-- /.table-stats -->
                         </div>
                     </div>

@@ -9,18 +9,17 @@
 <head>
     @include('partials.head')
     <style>
-        #divFormContainer{
-            width: 100%; 
-            height: 520px; 
-            display: flex; 
-            justify-content: center; 
-            align-items: center;
-        }
+    #divFormContainer {
+        width: 100%;
+        height: 520px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 
-        .card-settings{
-            width: 50%;
-        }
-
+    .card-settings {
+        width: 50%;
+    }
     </style>
 </head>
 
@@ -37,44 +36,60 @@
                 <div class="row">
                     <div id="divFormContainer">
                         <div class="card card-settings">
-                            <div class="card-header">
-                                <strong>Edit Profile</strong>
-                            </div>
-                            <div class="card-body card-block">
-                                <form action="#" method="post" class="form-horizontal">
+                            <form action="{{ route('edit-profile') }}" method="post" class="form-horizontal"
+                                enctype="multipart/form-data">
+                                <div class="card-header">
+                                    <strong>Edit Profile</strong>
+                                </div>
+                                <div class="card-body card-block">
+
+                                    @csrf
                                     <div class="row form-group">
                                         <div class="col col-md-3">
-                                            <label for="hf-email" class=" form-control-label">Display Name</label>
+                                            <label for="txtName" class=" form-control-label">Display Name</label>
                                         </div>
                                         <div class="col-12 col-md-9">
-                                            <input type="email" id="hf-email" name="hf-email" placeholder="Enter Name..." class="form-control">
+                                            <input type="text" id="txtName" name="txtName"
+                                                value="{{ old('txtName', $user->name) }}" placeholder="Enter Name..."
+                                                class="form-control">
                                         </div>
                                     </div>
                                     <div class="row form-group">
                                         <div class="col col-md-3">
-                                            <label for="hf-email" class=" form-control-label">Phone</label>
+                                            <label for="txtPhone" class="form-control-label">Phone</label>
                                         </div>
                                         <div class="col-12 col-md-9">
-                                            <input type="email" id="hf-email" name="hf-email" placeholder="Enter Phone..." class="form-control">
+                                            <input type="text" id="txtPhone" name="txtPhone"
+                                                value="{{ old('txtName', $user->phone) }}" placeholder="Enter Phone..."
+                                                class="form-control">
                                         </div>
                                     </div>
                                     <div class="row form-group">
                                         <div class="col col-md-3">
-                                            <label for="hf-password" class=" form-control-label">Picture</label></div>
+                                            <label for="fulImage" class=" form-control-label">Picture</label>
+                                        </div>
                                         <div class="col-12 col-md-9">
-                                            <input type="file" id="hf-password" name="hf-password" placeholder="Select Picture..." class="form-control">
+                                            <input type="file" id="fulImage" name="fulImage"
+                                                placeholder="Select Picture..." class="form-control">
+                                        </div>
+                                        <div class="col col-md-3">
+                                            <label for="fulImage" class=" form-control-label"></label>
+                                        </div>
+                                        <div class="col-12 col-md-9 mt-3">
+                                            <img width="100" src="{{ $user->profile_photo_path }}" alt="">
                                         </div>
                                     </div>
-                                </form>
-                            </div>
-                            <div class="card-footer">
-                                <button type="submit" class="btn btn-primary btn-sm">
-                                    <i class="fa fa-dot-circle-o"></i> Submit
-                                </button>
-                                <button type="reset" class="btn btn-danger btn-sm">
-                                    <i class="fa fa-ban"></i> Reset
-                                </button>
-                            </div>
+
+                                </div>
+                                <div class="card-footer">
+                                    <button type="submit" class="btn btn-primary btn-sm">
+                                        <i class="fa fa-dot-circle-o"></i> Submit
+                                    </button>
+                                    <button type="reset" class="btn btn-danger btn-sm">
+                                        <i class="fa fa-ban"></i> Reset
+                                    </button>
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>

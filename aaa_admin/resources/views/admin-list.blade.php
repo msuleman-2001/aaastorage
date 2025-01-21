@@ -21,7 +21,7 @@
                     <div class="col-lg-12">
                         <div class="card">
                             <div class="card-header">
-                                <strong class="card-title">Admins</strong>
+                                <strong class="card-title">Admins ({{ $msg ?? 'na' }})</strong>
                             </div>
                             <div class="card-body">
                                 <p><a href="{{ route ('new-admin') }}" class="btn btn-success">Add New Admin</a></p>

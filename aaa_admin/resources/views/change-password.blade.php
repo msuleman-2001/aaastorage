@@ -9,18 +9,17 @@
 <head>
     @include('partials.head')
     <style>
-        #divFormContainer{
-            width: 100%; 
-            height: 520px; 
-            display: flex; 
-            justify-content: center; 
-            align-items: center;
-        }
+    #divFormContainer {
+        width: 100%;
+        height: 520px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 
-        .card-settings{
-            width: 50%;
-        }
-
+    .card-settings {
+        width: 50%;
+    }
     </style>
 </head>
 
@@ -37,44 +36,46 @@
                 <div class="row">
                     <div id="divFormContainer">
                         <div class="card card-settings">
-                            <div class="card-header">
-                                <strong>Change Password</strong>
-                            </div>
-                            <div class="card-body card-block">
-                                <form action="#" method="post" class="form-horizontal">
+                            <form action="{{ route('change-password') }}" method="post" class="form-horizontal" enctype="multipart/form-data">
+                                <div class="card-header">
+                                    <strong>Change Password</strong>
+                                </div>
+                                @csrf
+                                <div class="card-body card-block">
                                     <div class="row form-group">
-                                        <div class="col col-md-4"><label for="hf-email"
-                                                class=" form-control-label">Old Password</label></div>
-                                        <div class="col-12 col-md-8"><input type="password" id="hf-email" name="hf-email"
-                                                placeholder="Enter Old Password..." class="form-control">
+                                        <div class="col col-md-4">
+                                            <label for="txtCurrentPassword" class=" form-control-label">Current Password</label>
+                                        </div>
+                                        <div class="col-12 col-md-8">
+                                            <input type="password" id="txtCurrentPassword" name="txtCurrentPassword" placeholder="Enter Current Password..." class="form-control">
                                         </div>
                                     </div>
                                     <div class="row form-group">
-                                        <div class="col col-md-4"><label for="hf-password"
-                                                class=" form-control-label">New Password</label></div>
-                                        <div class="col-12 col-md-8"><input type="password" id="hf-password"
-                                                name="hf-password" placeholder="Enter New Password..."
-                                                class="form-control">
+                                        <div class="col col-md-4">
+                                            <label for="txtNewPassword" class=" form-control-label">New Password</label>
+                                        </div>
+                                        <div class="col-12 col-md-8">
+                                            <input type="password" id="txtNewPassword" name="txtNewPassword" placeholder="Enter New Password..." class="form-control">
                                         </div>
                                     </div>
                                     <div class="row form-group">
-                                        <div class="col col-md-4"><label for="hf-password"
-                                                class=" form-control-label">Confirm Password</label></div>
-                                        <div class="col-12 col-md-8"><input type="password" id="hf-password"
-                                                name="hf-password" placeholder="Enter Confirm Password..."
-                                                class="form-control">
+                                        <div class="col col-md-4">
+                                            <label for="txtConfirmPassword" class=" form-control-label">Confirm Password</label>
+                                        </div>
+                                        <div class="col-12 col-md-8">
+                                            <input type="password" id="txtConfirmPassword" name="txtConfirmPassword" placeholder="Enter Confirm Password..." class="form-control">
                                         </div>
                                     </div>
-                                </form>
-                            </div>
-                            <div class="card-footer">
-                                <button type="submit" class="btn btn-primary btn-sm">
-                                    <i class="fa fa-dot-circle-o"></i> Submit
-                                </button>
-                                <button type="reset" class="btn btn-danger btn-sm">
-                                    <i class="fa fa-ban"></i> Reset
-                                </button>
-                            </div>
+                                </div>
+                                <div class="card-footer">
+                                    <button type="submit" class="btn btn-primary btn-sm">
+                                        <i class="fa fa-dot-circle-o"></i> Submit
+                                    </button>
+                                    <button type="reset" class="btn btn-danger btn-sm">
+                                        <i class="fa fa-ban"></i> Reset
+                                    </button>
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>

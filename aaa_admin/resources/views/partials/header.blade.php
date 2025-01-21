@@ -87,7 +87,7 @@
 
             <div class="user-area dropdown float-right">
                 <a href="#" class="dropdown-toggle active" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <img class="user-avatar rounded-circle" src="images/admin.jpg" alt="User Avatar">
+                    <img class="user-avatar rounded-circle" src="{{ Auth::user()->profile_photo_path }}" alt="User Avatar">
                 </a>
 
                 <div class="user-menu dropdown-menu">
@@ -95,7 +95,7 @@
 
                     <a class="nav-link" href="{{ route('change-password') }}"><i class="fa fa-cog"></i>Change Password</a>
 
-                    <a class="nav-link" href="{{ route ('login') }}"><i class="fa fa-power-off"></i>Logout</a>
+                    <a class="nav-link" href="{{ route ('logout') }}"><i class="fa fa-power-off"></i>Logout</a>
                 </div>
             </div>
 
