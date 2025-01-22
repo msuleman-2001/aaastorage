@@ -40,6 +40,7 @@ use App\http\Controllers\ReviewController;
 
 Route::get('/about', [PageController::class, 'about']);
 Route::get('/chart', [PageController::class, 'chart']);
+Route::get('/tester', [PageController::class, 'tester'])->name('tester');
 
 // Route::middleware('auth')->group(function () {
 //     Route::get('/index', function () {

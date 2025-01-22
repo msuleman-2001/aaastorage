@@ -15,4 +15,8 @@ class PageController extends Controller
     public function chart(){
         return view("charts-chartjs");
     }
+
+    public function tester(){
+        return view ('test-list');
+    }
 }
