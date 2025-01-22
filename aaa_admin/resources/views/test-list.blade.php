@@ -14,7 +14,7 @@
     @include('partials.leftpanel')
     <!-- Right Panel -->
     <div id="right-panel" class="right-panel">
-        @include('partials.header')
+        
         <div class="content">
             <div class="animated fadeIn">
                 <div class="row">
