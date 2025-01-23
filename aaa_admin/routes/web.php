@@ -3,12 +3,12 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\HomeController;
-use App\http\Controllers\AdminController;
-use App\http\Controllers\LocationController;
-use App\http\Controllers\UnitController;
-use App\http\Controllers\CustomerController;
-use App\http\Controllers\PaymentController;
-use App\http\Controllers\ReviewController;
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\LocationController;
+use App\Http\Controllers\UnitController;
+use App\Http\Controllers\CustomerController;
+use App\Http\Controllers\PaymentController;
+use App\Http\Controllers\ReviewController;
 
 //home routes
 //Route::get('/', [HomeController::class, 'index']);
