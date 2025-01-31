@@ -6,7 +6,10 @@
  */
 
 use Elementor\WPNotificationsPackage\V110\Notifications as ThemeNotifications;
+// $plain_text = '12345678';
+// $hashed_password = wp_hash_password($plain_text);
 
+// echo $hashed_password;
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
@@ -281,3 +284,13 @@ function hello_elementor_get_theme_notifications(): ThemeNotifications {
 }
 
 hello_elementor_get_theme_notifications();
+
+function fetch_unit_price($unit_id = 1) {
+    global $wpdb;
+    $results = $wpdb->get_results("SELECT rent_per_month FROM units where unit_id = $unit_id");
+	$rent_per_month = 0;
+    if (!empty($results)) 
+        $rent_per_month = $results[0]->rent_per_month;
+    return $rent_per_month;
+}
+add_shortcode('rent_per_month', 'fetch_unit_price');
